@@ -35,3 +35,11 @@ chmod -R 775 storage bootstrap/cache
 ```
 composer dump-autoload
 ```
+
+
+or just:
+
+
+```
+composer require laravel/sanctum && php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider" && composer install && php artisan cache:clear && php artisan config:clear && php artisan route:clear && php artisan view:clear && php artisan migrate && npm install && npm run build && chmod -R 775 storage bootstrap/cache && composer dump-autoload
+```
